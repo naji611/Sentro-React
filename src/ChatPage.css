@@ -1,0 +1,178 @@
+/* ChatPage.css */
+
+/* Existing styles for other elements */
+
+.chat-container {
+  display: flex;
+  height: 100vh;
+}
+
+.friends-list-panel {
+  flex: 1;
+  padding: 20px;
+  background-color: #f8f9fa; /* Light gray */
+  border-right: 1px solid #ced4da; /* Add a border to separate it from the chat content */
+}
+
+.friends-list {
+  list-style: none;
+  padding: 0;
+}
+
+.friends-list li {
+  margin-bottom: 10px;
+}
+
+.friends-list li a {
+  text-decoration: none;
+  color: #333333; /* Dark gray */
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.friends-list li a:hover {
+  background-color: #e9ecef; /* Light gray on hover */
+}
+
+.chat-content {
+  flex: 2;
+  padding: 20px;
+  background-color: #ffffff; /* White */
+}
+
+.message-container {
+  overflow-y: auto;
+  max-height: calc(100vh - 250px);
+}
+
+.message {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 400px; /* Limit message width to prevent long messages from stretching the container */
+  overflow-wrap: break-word; /* Wrap long words within the message */
+  word-wrap: break-word; /* For older browsers */
+  word-break: break-all; /* Break words if necessary to prevent overflow */
+}
+
+.sent {
+  background-color: #007bff; /* Blue */
+  color: #ffffff; /* White */
+  align-self: flex-start; /* Change alignment to flex-start */
+  margin-left: auto; /* Push the sent messages slightly to the right */
+}
+
+.received {
+  background-color: #e9ecef; /* Light gray */
+  color: rgb(57, 114, 0); /* Dark gray */
+  align-self: flex-end; /* Keep alignment as flex-end */
+}
+
+.message-content {
+  margin: 0;
+  font-size: 16px;
+  color: #333333;
+}
+
+.message-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.sender-name {
+  font-weight: bold;
+}
+
+.message-date {
+  font-size: 12px;
+  color: #777777; /* Gray */
+  width: 150px;
+}
+
+.input-container {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.message-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ced4da; /* Light gray */
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.send-button {
+  padding: 10px 20px;
+  background-color: #007bff; /* Blue */
+  color: #ffffff; /* White */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.send-button:disabled {
+  background-color: #cccccc; /* Light gray when disabled */
+}
+
+.send-button:hover {
+  background-color: #0056b3; /* Darker blue */
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+.status-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 5px; /* Adjust as needed */
+}
+
+.online {
+  background-color: green;
+}
+
+.offline {
+  background-color: red;
+}
+
+.home-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 6px 12px; /* Adjust padding to make the button smaller */
+  background-color: #007bff; /* Blue */
+  color: #ffffff; /* White text */
+  border: none;
+  border-radius: 5px;
+  font-size: 14px; /* Decrease font size to make the text smaller */
+
+  transition: background-color 0.3s ease;
+  height: 30px;
+  line-height: 30px; /* Center the text vertically */
+  margin-right: 10px;
+}
+
+.home-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  text-decoration: none;
+}
+
+.notification {
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 50%;
+  margin-left: 5px; /* Adjust spacing from the friend's name */
+}
